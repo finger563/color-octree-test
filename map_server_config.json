@@ -1,0 +1,12 @@
+{
+  "sensor_model/max_range": 6.0,
+  "resolution": 0.02,
+  "save_pointcloud": false,
+  "pointcloud_filename": "pc_scan.node",
+  "pointcloud_min_x": -3,
+  "pointcloud_max_x": 3,
+  "pointcloud_min_y": -3,
+  "pointcloud_max_y": 3,
+  "pointcloud_min_z": 0.2,
+  "pointcloud_max_z": 3
+}
