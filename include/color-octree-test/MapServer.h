@@ -4,6 +4,7 @@
 
 #include <octomap/octomap.h>
 #include <octomap/OcTreeKey.h>
+#include <octomap/ColorOcTree.h>
 
 #include <color-octree-test/ColorOcTree.h>
 

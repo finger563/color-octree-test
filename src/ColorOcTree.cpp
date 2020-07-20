@@ -77,7 +77,7 @@ namespace roshi {
       return Color((float) mr, (float) mg, (float) mb);
     }
     else { // no child had a color other than white
-      return Color(255, 255, 255);
+      return Color(1.0f, 1.0f, 1.0f);
     }
   }
 

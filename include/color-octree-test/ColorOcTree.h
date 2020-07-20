@@ -51,7 +51,7 @@ namespace roshi {
     
     class Color {
     public:
-    Color() : r(255), g(255), b(255) {}
+    Color() : r(1.0f), g(1.0f), b(1.0f) {}
     Color(float _r, float _g, float _b) 
       : r(_r), g(_g), b(_b) {}
       inline bool operator== (const Color &other) const {
@@ -87,7 +87,7 @@ namespace roshi {
 
     // has any color been integrated? (pure white is very unlikely...)
     inline bool isColorSet() const { 
-      return ((color.r != 255) || (color.g != 255) || (color.b != 255)); 
+      return ((color.r != 1.0f) || (color.g != 1.0f) || (color.b != 1.0f));
     }
 
     void updateColorChildren();
