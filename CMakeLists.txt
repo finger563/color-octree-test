@@ -16,6 +16,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -fconcepts")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 
+# some compile definitions
+if (USE_OCTOMAP_OCTREE)
+  add_definitions(-DUSE_OCTOMAP_OCTREE=1)
+  message("Using octomap::ColorOcTree (faster, bad colors) in MapServer")
+else()
+  message("Using roshi::ColorOcTree (slower, correct colors) in MapServer")
+endif(USE_OCTOMAP_OCTREE)
+
 # Octomap
 find_package(octomap REQUIRED)
 add_definitions(-DOCTOMAP_NODEBUGOUT)

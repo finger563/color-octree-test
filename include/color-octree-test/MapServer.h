@@ -14,7 +14,11 @@ namespace roshi {
   class MapServer {
 
   public:
+    #if USE_OCTOMAP_OCTREE
+    typedef octomap::ColorOcTree OcTreeT;
+    #else
     typedef roshi::ColorOcTree OcTreeT;
+    #endif
 
     MapServer();
     ~MapServer();
